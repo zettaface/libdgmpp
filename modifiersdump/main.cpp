@@ -60,7 +60,7 @@ std::vector<std::map<std::string, std::string>> parse(std::string modifierInfo) 
 	replace(modifierInfo, " ", "");
 	
 	std::vector<std::map<std::string, std::string>> modifiers;
-	for (auto modifier: split(modifierInfo, "-")) {
+	for (auto modifier: split(modifierInfo, "- ")) {
 		std::map<std::string, std::string> m;
 		for (auto row: split(modifier, "\n")) {
 			if (row.length() == 0 || row[0] == '#')
